@@ -1,0 +1,12 @@
+[
+  {
+    "name": "نمونه‌کار 1",
+    "image": "https://example.com/image1.jpg",
+    "description": "توضیح مختصر در مورد پروژه 1"
+  },
+  {
+    "name": "نمونه‌کار 2",
+    "image": "https://example.com/image2.jpg",
+    "description": "توضیح مختصر در مورد پروژه 2"
+  }
+]
