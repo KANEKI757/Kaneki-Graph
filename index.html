@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kaneki Graph | نمونه‌کارها</title>
+  <title>Kaneki Graph | خدمات گرافیکی</title>
   <style>
     body {
       font-family: sans-serif;
@@ -17,6 +17,20 @@
       color: #fff;
       padding: 1rem;
       text-align: center;
+    }
+    nav {
+      background: #444;
+      color: #fff;
+      padding: 0.5rem;
+      text-align: center;
+    }
+    nav a {
+      color: #fff;
+      margin: 0 15px;
+      text-decoration: none;
+    }
+    nav a:hover {
+      text-decoration: underline;
     }
     main {
       padding: 2rem;
@@ -37,14 +51,88 @@
       color: #007b83;
       margin: 0.5rem 0;
     }
+    .section-title {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: #007b83;
+    }
+    .courses ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    .courses li {
+      background: #fff;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      border-radius: 0.5rem;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    }
+    footer {
+      background: #444;
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
   </style>
 </head>
 <body>
   <header>
     <h1>Kaneki Graph</h1>
-    <p>نمونه‌کارهای گرافیکی و خدمات طراحی</p>
+    <p>خدمات گرافیکی حرفه‌ای</p>
   </header>
-  <main id="posts"></main>
+  
+  <nav>
+    <a href="#about">درباره ما</a>
+    <a href="#portfolio">نمونه‌کارها</a>
+    <a href="#courses">دوره‌های آموزشی</a>
+    <a href="#contact">تماس با ما</a>
+  </nav>
+  
+  <main>
+    <!-- بخش درباره ما -->
+    <section id="about">
+      <h2 class="section-title">درباره ما</h2>
+      <p>ما در Kaneki Graph خدمات طراحی و گرافیکی حرفه‌ای ارائه می‌دهیم. تیم ما متشکل از طراحان با تجربه است که به شما کمک می‌کنند پروژه‌های گرافیکی خود را به بهترین شکل انجام دهید.</p>
+    </section>
+
+    <!-- بخش نمونه‌کارها -->
+    <section id="portfolio">
+      <h2 class="section-title">نمونه‌کارها</h2>
+      <div id="posts"></div>
+    </section>
+
+    <!-- بخش دوره‌های آموزشی -->
+    <section id="courses" class="courses">
+      <h2 class="section-title">دوره‌های آموزشی</h2>
+      <ul>
+        <li>دوره طراحی لوگو: آشنایی با اصول طراحی لوگو</li>
+        <li>دوره طراحی وب: آموزش طراحی سایت به صورت گرافیکی</li>
+        <li>دوره فتوشاپ: یادگیری ابزارها و تکنیک‌های فتوشاپ</li>
+      </ul>
+    </section>
+
+    <!-- بخش تماس با ما -->
+    <section id="contact">
+      <h2 class="section-title">تماس با ما</h2>
+      <p>برای ارتباط با ما، لطفاً از طریق فرم زیر اقدام کنید یا از طریق ایمیل با ما تماس بگیرید.</p>
+      <form>
+        <label for="name">نام:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+        <label for="email">ایمیل:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+        <label for="message">پیام:</label><br>
+        <textarea id="message" name="message" rows="4" required></textarea><br><br>
+        <input type="submit" value="ارسال">
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Kaneki Graph. All Rights Reserved.</p>
+  </footer>
 
   <script>
     fetch('data/posts.json')
