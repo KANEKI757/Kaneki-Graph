@@ -1,7 +1,7 @@
 backend:
   name: github
   repo: KANEKI757/kaneki-Graph
-  branch: main
+  branch: gh-pages
   auth_type: implicit
   app_id: Ov23liHEBVBSsz6nTibg
 
