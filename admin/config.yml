@@ -15,4 +15,4 @@ collections:
       - { label: "عنوان", name: "title", widget: "string" }
       - { label: "تاریخ", name: "date", widget: "datetime" }
       - { label: "متن", name: "body", widget: "markdown" }
-      fix branch name to gh-pages
+      fix: correct branch name for Netlify CMS
