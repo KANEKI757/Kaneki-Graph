@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8" />
+  <title>ورود به پنل مدیریت</title>
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body class="login-body">
+  <div class="login-container">
+    <h2>ورود به پنل مدیریت</h2>
+    <form id="loginForm">
+      <input type="text" id="username" placeholder="نام کاربری" required />
+      <input type="password" id="password" placeholder="رمز عبور" required />
+      <button type="submit">ورود</button>
+      <p id="login-error" style="color:red;"></p>
+    </form>
+  </div>
+
+  <script>
+    const form = document.getElementById('loginForm');
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const username = document.getElementById('username').value;
+      const password = document.getElementById('password').value;
+
+      const res = await fetch('../data/users.json');
+      const users = await res.json();
+
+      const user = users.find(u => u.username === username && u.password === password);
+      if (user) {
+        localStorage.setItem('adminUser', username);
+        window.location.href = "dashboard.html";
+      } else {
+        document.getElementById('login-error').textContent = 'نام کاربری یا رمز اشتباه است';
+      }
+    });
+  </script>
+</body>
+</html>
