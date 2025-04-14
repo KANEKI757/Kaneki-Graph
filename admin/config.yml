@@ -1,7 +1,9 @@
 backend:
   name: github
-  repo: kaneki757.github.io/Kaneki-Graph
+  repo: KANEKI757/kaneki-Graph
   branch: main
+  auth_type: implicit
+  app_id: Ov23liHEBVBSsz6nTibg
 
 media_folder: "static/uploads"
 public_folder: "/uploads"
@@ -11,6 +13,7 @@ collections:
     label: "مقالات"
     folder: "_posts"
     create: true
+    slug: "{{slug}}"
     fields:
       - { label: "عنوان", name: "title", widget: "string" }
       - { label: "محتوا", name: "body", widget: "markdown" }
