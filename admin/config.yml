@@ -1,5 +1,6 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: KANEKI757/Kaneki-Graph
   branch: gh-pages
 
 media_folder: "images/uploads"
@@ -15,4 +16,3 @@ collections:
       - { label: "عنوان", name: "title", widget: "string" }
       - { label: "تاریخ", name: "date", widget: "datetime" }
       - { label: "متن", name: "body", widget: "markdown" }
-      fix: correct branch name for Netlify CMS
