@@ -2,14 +2,16 @@
 <html lang="fa">
 <head>
   <meta charset="UTF-8">
-  <title>Kaneki Graph</title>
+  <title>کانکی گراف</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap');
+
     :root {
-      --primary-color: #252525;
+      --primary-color: #00ff99;
       --secondary-color: #ffffff;
-      --accent-color: #ffca28;
-      --font: 'IRANSans', sans-serif;
+      --accent-color: #00cc88;
+      --font: 'Vazirmatn', sans-serif;
     }
 
     body {
@@ -17,6 +19,7 @@
       font-family: var(--font);
       background-color: var(--secondary-color);
       color: var(--primary-color);
+      direction: rtl;
     }
 
     header {
@@ -64,12 +67,22 @@
       padding: 1rem;
       font-size: 0.9rem;
     }
+
+    @media (max-width: 768px) {
+      header, .hero, .section, footer {
+        padding: 1rem;
+      }
+
+      .hero h1 {
+        font-size: 2rem;
+      }
+    }
   </style>
 </head>
 <body>
 
   <header>
-    <div>Kaneki Graph</div>
+    <div>کانکی گراف</div>
     <nav>
       <a href="#">خانه</a>
       <a href="#">نمونه‌کارها</a>
@@ -79,18 +92,36 @@
   </header>
 
   <section class="hero">
-    <h1>طراحی خلاقانه با Kaneki Graph</h1>
+    <h1>طراحی خلاقانه با کانکی گراف</h1>
     <p>ارائه خدمات گرافیکی با بالاترین کیفیت و حرفه‌ای‌ترین طراحی‌ها</p>
   </section>
 
   <section class="section">
+    <h2>خدمات ما</h2>
+    <p>در این بخش می‌توانید با خدمات ما آشنا شوید.</p>
+    <!-- محتوای خدمات -->
+  </section>
+
+  <section class="section">
     <h2>نمونه‌کارها</h2>
-    <p>در این بخش می‌تونید برخی از پروژه‌های انجام شده رو ببینید.</p>
+    <p>در این بخش می‌توانید برخی از پروژه‌های انجام شده را مشاهده کنید.</p>
     <!-- محتوای نمونه‌کارها -->
   </section>
 
+  <section class="section">
+    <h2>درباره ما</h2>
+    <p>اطلاعاتی درباره تیم و فعالیت‌های ما.</p>
+    <!-- محتوای درباره ما -->
+  </section>
+
+  <section class="section">
+    <h2>تماس با ما</h2>
+    <p>برای ارتباط با ما از طریق فرم زیر اقدام کنید.</p>
+    <!-- فرم تماس -->
+  </section>
+
   <footer>
-    &copy; 2025 Kaneki Graph. همه حقوق محفوظ است.
+    &copy; 2025 کانکی گراف. همه حقوق محفوظ است.
   </footer>
 
 </body>
