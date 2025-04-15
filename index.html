@@ -1,78 +1,60 @@
 <!DOCTYPE html>
 <html lang="fa">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Kaneki Graph</title>
+  <meta charset="UTF-8">
+  <title>صفحه اصلی | Kaneki Graph</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <script>
+    fetch('data/appearance.json')
+      .then(res => res.json())
+      .then(settings => {
+        document.documentElement.style.setProperty('--primary-color', settings.primaryColor);
+        document.documentElement.style.setProperty('--bg-color', settings.backgroundColor);
+        document.documentElement.style.setProperty('--font', settings.font);
+        document.documentElement.style.setProperty('--font-size', settings.fontSize);
+        document.documentElement.style.setProperty('--border-radius', settings.borderRadius);
+      });
+  </script>
+
   <style>
+    :root {
+      --primary-color: #00796B;
+      --bg-color: #f2f2f2;
+      --font: sans-serif;
+      --font-size: 16px;
+      --border-radius: 8px;
+    }
     body {
-      font-family: sans-serif;
-      background-color: #f2f2f2;
       margin: 0;
       padding: 0;
-      direction: rtl;
+      background-color: var(--bg-color);
+      font-family: var(--font);
+      font-size: var(--font-size);
     }
-    header {
-      background-color: #00796B;
+    header, footer {
+      background-color: var(--primary-color);
+      padding: 1rem;
       color: white;
-      padding: 20px;
-      text-align: center;
-    }
-    nav ul {
-      list-style: none;
-      padding: 0;
-      display: flex;
-      justify-content: center;
-      background-color: #004D40;
-      margin: 0;
-    }
-    nav ul li {
-      margin: 0 15px;
-    }
-    nav ul li a {
-      color: white;
-      text-decoration: none;
-      padding: 15px 0;
-      display: block;
-    }
-    nav ul li a:hover {
-      text-decoration: underline;
+      border-radius: var(--border-radius);
     }
     main {
-      padding: 20px;
-      text-align: center;
-    }
-    footer {
-      background-color: #004D40;
-      color: white;
-      text-align: center;
-      padding: 15px;
-      margin-top: 40px;
+      padding: 2rem;
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>کانکی گراف</h1>
-    <p>ارائه خدمات گرافیکی، طراحی و آموزش</p>
+    <h1>Kaneki Graph</h1>
   </header>
 
-  <nav>
-    <ul>
-      <li><a href="index.html">خانه</a></li>
-      <li><a href="projects.html">نمونه‌کارها</a></li>
-      <li><a href="courses.html">دوره‌ها</a></li>
-      <li><a href="support.html">پشتیبانی</a></li>
-    </ul>
-  </nav>
-
   <main>
-    <h2>به کانکی گراف خوش آمدید</h2>
-    <p>ما اینجاییم تا بهترین خدمات گرافیکی و آموزش‌های طراحی رو به شما ارائه بدیم.</p>
+    <h2>به سایت ما خوش آمدید!</h2>
+    <p>در اینجا می‌توانید نمونه‌کارها، دوره‌ها، و خدمات ما را مشاهده کنید.</p>
   </main>
 
   <footer>
-    <p>تمامی حقوق محفوظ است &copy; 2025 کانکی گراف</p>
+    <p>تمام حقوق محفوظ است.</p>
   </footer>
 </body>
 </html>
