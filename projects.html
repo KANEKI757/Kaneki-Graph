@@ -2,51 +2,41 @@
 <html lang="fa">
 <head>
   <meta charset="UTF-8">
-  <title>نمونه‌کارها | Kaneki Graph</title>
-  <style>
-    body {
-      font-family: sans-serif;
-      direction: rtl;
-      padding: 20px;
-      background: #f8f8f8;
-    }
-    .project {
-      background: #fff;
-      border: 1px solid #ccc;
-      border-radius: 10px;
-      padding: 15px;
-      margin-bottom: 20px;
-      box-shadow: 0 0 10px #ccc;
-    }
-    .project img {
-      max-width: 100%;
-      height: auto;
-      border-radius: 8px;
-    }
-    h2 {
-      color: #228B22;
-    }
-  </style>
+  <title>نمونه‌کارها - Kaneki Graph</title>
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-  <h2>نمونه‌کارها</h2>
-  <div id="projectsContainer"></div>
+  <header>
+    <h1>نمونه‌کارها</h1>
+    <nav>
+      <a href="index.html">صفحه اصلی</a>
+      <a href="projects.html">نمونه‌کارها</a>
+      <a href="support.html">پشتیبانی</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="projects-container"></section>
+  </main>
 
   <script>
     fetch('data/projects.json')
-      .then(response => response.json())
-      .then(projects => {
-        const container = document.getElementById("projectsContainer");
-        projects.forEach(project => {
-          const div = document.createElement("div");
-          div.className = "project";
-          div.innerHTML = `
-            <h3>${project.name}</h3>
-            <img src="${project.image}" alt="${project.name}">
+      .then(res => res.json())
+      .then(data => {
+        const container = document.getElementById('projects-container');
+        data.forEach(project => {
+          const box = document.createElement('div');
+          box.className = 'project-box';
+          box.innerHTML = `
+            <img src="${project.image}" alt="${project.title}">
+            <h3>${project.title}</h3>
             <p>${project.description}</p>
           `;
-          container.appendChild(div);
+          container.appendChild(box);
         });
+      })
+      .catch(() => {
+        document.getElementById('projects-container').innerText = 'نمونه‌کاری یافت نشد.';
       });
   </script>
 </body>
