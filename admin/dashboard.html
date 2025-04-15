@@ -1,21 +1,31 @@
 <!DOCTYPE html>
 <html lang="fa">
 <head>
-  <meta charset="UTF-8" />
-  <title>پنل مدیریت - Kaneki Graph</title>
-  <link rel="stylesheet" href="../style.css" />
+  <meta charset="UTF-8">
+  <title>داشبورد مدیریت</title>
+  <link rel="stylesheet" href="assets/css/admin-style.css">
 </head>
 <body>
   <div class="dashboard">
-    <h2>به پنل مدیریت خوش آمدید</h2>
-    <p>در اینجا می‌توانید ظاهر سایت، نمونه‌کارها، دوره‌ها و ... را مدیریت کنید.</p>
-
+    <h1>پنل مدیریت Kaneki Graph</h1>
     <ul>
+      <li><a href="projects.html">مدیریت نمونه‌کارها</a></li>
+      <li><a href="courses.html">مدیریت دوره‌ها</a></li>
       <li><a href="appearance.html">مدیریت ظاهر سایت</a></li>
-<li><a href="projects.html">مدیریت نمونه‌کارها</a></li>
-      <li><a href="#">مدیریت دوره‌ها</a></li>
-      <li><a href="#">پشتیبانی و ارتباطات</a></li>
+      <li><a href="support.html">پشتیبانی و پیام‌ها</a></li>
+      <li><a href="#" onclick="logout()">خروج</a></li>
     </ul>
   </div>
+
+  <script>
+    if (!sessionStorage.getItem("admin")) {
+      window.location.href = "login.html";
+    }
+
+    function logout() {
+      sessionStorage.removeItem("admin");
+      window.location.href = "login.html";
+    }
+  </script>
 </body>
 </html>
